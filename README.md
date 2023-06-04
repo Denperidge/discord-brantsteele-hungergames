@@ -3,7 +3,7 @@
 ## Getting started
 
 ### Environment variables
-Either using your command line or a .env file, make sure to set your bots client id & token respectively in `` `BHGD_TOKEN`
+Either using your command line or a .env file, make sure to set your bots client id & token respectively in `BHGD_CLIENT_ID` & `BHGD_TOKEN`.
 
 ### Clone & build locally
 Pre-requirements: node.js & npm/yarn
