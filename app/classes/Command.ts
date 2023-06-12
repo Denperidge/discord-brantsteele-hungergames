@@ -1,11 +1,11 @@
-import {Interaction} from "discord.js";
+import {CommandInteraction, Interaction} from "discord.js";
 
 
 
 interface Command {
     name: string,
     description: string,
-    function: (interaction: Interaction) => {}
+    function: (interaction: CommandInteraction) => {}
 }
 
 interface CommandDescription {

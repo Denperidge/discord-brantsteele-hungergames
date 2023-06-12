@@ -1,14 +1,13 @@
 {
-
   "license": "MIT",
-
   "scripts": {
     "start": "yarn ts-node app/index.ts",
     "build": "yarn tsc"
   },
   "dependencies": {
     "discord.js": "^14.11.0",
-    "dotenv": "^16.1.4"
+    "dotenv": "^16.1.4",
+    "puppeteer": "^20.6.0"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

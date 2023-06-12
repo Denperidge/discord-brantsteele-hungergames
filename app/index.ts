@@ -2,6 +2,20 @@ import { Client, GatewayIntentBits } from "discord.js";
 import registerCommands from "./register";
 import getFromEnv from "./env";
 import { CommandDict } from "./classes/Command";
+import { Browser, Page } from "puppeteer";
+
+declare global {
+    // Have to use var here, let doesn't work
+    var sessions: 
+        {
+            [key:string]: { 
+                browser: Browser 
+                page?: Page
+            } 
+        };
+}
+
+globalThis.sessions = {};
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds]
