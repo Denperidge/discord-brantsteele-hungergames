@@ -10,7 +10,8 @@ declare global {
         {
             [key:string]: { 
                 browser: Browser 
-                page?: Page
+                page?: Page,
+                nextUrl?: string
             } 
         };
 }

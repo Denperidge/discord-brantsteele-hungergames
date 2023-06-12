@@ -1,5 +1,6 @@
 import { REST, Routes } from "discord.js";
 import start from "./commands/start";
+import proceed from "./commands/proceed";
 import getFromEnv from "./env";
 import { Command, CommandDescription, CommandDict } from "./classes/Command";
 
@@ -39,7 +40,8 @@ async function registerCommands() : Promise<CommandDict> {
 
 
 const commands: CommandDict = {
-    "start": start
+    "start": start,
+    "proceed": proceed
 }
 
 const commandsDescriptions = getCommandDescriptionsFromCommands(commands);
