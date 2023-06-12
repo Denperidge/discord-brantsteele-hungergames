@@ -1,11 +1,27 @@
 # Brantsteele Hungergames Discord Wrapper
 
-## Getting started
+## How-to
+**NOTE:** Either using your command line or a .env file, make sure to set your bots client id & token respectively in `BHGD_CLIENT_ID` & `BHGD_TOKEN`.
 
-### Environment variables
-Either using your command line or a .env file, make sure to set your bots client id & token respectively in `BHGD_CLIENT_ID` & `BHGD_TOKEN`.
+### Run (Docker Compose)
+Pre-requirements: docker compose
+```bash
+git clone https://github.com/Denperidge/discord-brantsteele-hungergames.git
+cd discord-brantsteele-hungergames
+docker-compose up --detach
+```
 
-### Clone & build locally
+### Run (Node)
+Pre-requirements: node.js & npm/yarn
+```bash
+git clone https://github.com/Denperidge/discord-brantsteele-hungergames.git
+cd discord-brantsteele-hungergames
+yarn install --dev
+yarn start
+```
+
+
+### Build locally
 Pre-requirements: node.js & npm/yarn
 
 Install using the following commands
@@ -13,9 +29,9 @@ Install using the following commands
 git clone https://github.com/Denperidge/discord-brantsteele-hungergames.git
 cd discord-brantsteele-hungergames
 yarn install --dev
-yarn build  # Builds the project to dist/
-yarn start  # Run the project directly
+yarn build
 ```
+
 
 ## Reference
 ### Commands
@@ -40,12 +56,6 @@ The **profile** system should allow the following:
 - And this profile will have all the information to create a `player` automatically, without any extra steps needed
 
 
-(Expansion would be possible by perhaps allowing a user to have multiple profiles to switch between, or by having characters on a per server basis? But with the latter, how do you prevent abuse and vandalism?)
-
-
-### Stats system
-(TODO figure out what to put in this or how to implement it)
-
 ## Discussions
 ### Why a wrapper instead of a rebuild?
 I explicitly did not want Discord bot that could replace it.That’d take a ton of work for something that either:
@@ -57,8 +67,20 @@ But with a wrapper (e.g. a Selenium browser instance) you can:
 - Create no more than usual traffic load for the website
 - Easily link back to the original
 
-### Why not implement the built-in saves & statistics
+### Not implementing the built-in saves & statistics
 The website has a built-in save function, which is *not* used, for the following reasons:
 - Less load on the brantsteele servers
 - It saves (as far as I am aware? check this) solely seasons
 
+### Further expansions
+These are things that could be added to the project, but aren't planned to be developed by me. However, someone else is free to do so through a PR and/or their own fork.
+
+#### Stats system
+While there is no set idea on what to put in this or how to implement it, it would be interesting
+
+#### Profile+
+Expansion would be possible by perhaps allowing a user to have multiple profiles to switch between, or by having characters on a per server basis. But with the latter, make sure to be wary of possible abuse and vandalism?
+
+
+## License
+Brantsteele's own TOS apply for their website. All the code written by me in this repo falls under the [MIT License](LICENSE).
